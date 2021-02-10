@@ -94,6 +94,7 @@ logtalk_library_path(doclet, tools('doclet/')).
 logtalk_library_path(help, tools('help/')).
 logtalk_library_path(lgtdoc, tools('lgtdoc/')).
 logtalk_library_path(lgtunit, tools('lgtunit/')).
+logtalk_library_path(packs, tools('packs/')).
 logtalk_library_path(ports_profiler, tools('ports_profiler/')).
 logtalk_library_path(profiler, tools('profiler/')).
 logtalk_library_path(tutor, tools('tutor/')).
