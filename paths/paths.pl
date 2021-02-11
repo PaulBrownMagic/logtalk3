@@ -48,6 +48,9 @@ logtalk_library_path(logtalk_home, '$LOGTALKHOME/').
 % Logtalk user directory
 logtalk_library_path(logtalk_user, '$LOGTALKUSER/').
 
+% Logtalk packs (third-party libraries) directory
+logtalk_library_path(logtalk_packs, logtalk_user('packs/')).
+
 % user home directory
 logtalk_library_path(home, HOME) :-
 	(	'$lgt_environment_variable'('HOME', _) ->
