@@ -207,7 +207,7 @@
 	:- mode(pack_(?atom, ?atom, ?atom, ?atom, ?atom, -list), zero_or_more).
 	:- info(pack_/6, [
 		comment is 'Registry packs table.',
-		argnames is ['Registry', 'Description', 'HomePage', 'Clone', 'Archive']
+		argnames is ['Registry', 'Description', 'HomePage', 'Clone', 'Archive', 'Versions']
 	]).
 
 	:- uses(logtalk, [
