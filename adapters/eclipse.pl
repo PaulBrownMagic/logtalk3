@@ -885,6 +885,28 @@ forall(Generate, Test) :-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
+%  atomics concat (not currently used in the compiler/runtime)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% atomic_list_concat(@list(atomic), ?atom)
+
+atomic_list_concat(Atomics, Atom) :-
+	atomics_to_string(Atomics, String),
+	atom_string(Atom, String).
+
+
+% atomic_list_concat(@list(atomic), +atom, ?atom)
+
+atomic_list_concat(Atomics, Glue, Atom) :-
+	atomics_to_string(Atomics, Glue, String),
+	atom_string(Atom, String).
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
 %  string built-in type
 %
 %  define these predicates to trivially fail if no string type is available
